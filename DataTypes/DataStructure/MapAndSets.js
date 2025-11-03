@@ -7,16 +7,10 @@ Each key is unique and is used to access its corresponding value.
 Maps are useful when you need to associate data with a specific identifier.
 
 Methods
-- set(key, value): Adds a new key-value pair to the map.
+- set(key, value): Adds a new key-value pair to the map. || Also it updates the value if the key already exists.
 - get(key): Retrieves the value associated with the given key.
 - has(key): Checks if the map contains the given key.
 - delete(key): Removes the key-value pair associated with the given key.
-- clear(): Removes all key-value pairs from the map.
-- size: Returns the number of key-value pairs in the map.
-- keys(): Returns an iterator for the keys in the map.
-- values(): Returns an iterator for the values in the map.
-- entries(): Returns an iterator for the key-value pairs in the map.
-
 */
 
 const user = new Map([
@@ -24,8 +18,40 @@ const user = new Map([
   ["age", 30],
   ["email", "john@example.com"],
 ]);
+user.set("address", "123 Main St");
+user.set("phone", "555-1234");
 console.log(
-  `Name: ${user.get("name")}, Age: ${user.get("age")}, Email: ${user.get("email")}`,
+  `
+   Added address and phone
+   Name: ${user.get("name")}
+   Age: ${user.get("age")}
+   Email: ${user.get("email")}
+   Address: ${user.get("address")}
+   Phone: ${user.get("phone")}`,
+);
+
+user.set("age", 31);
+console.log(
+  `
+   Updated age
+   Name: ${user.get("name")}
+   Age: ${user.get("age")}
+   Email: ${user.get("email")}
+   Address: ${user.get("address")}
+   Phone: ${user.get("phone")}`,
+);
+const hasage = user.has("age");
+console.log(`Has age: ${hasage}`);
+
+user.delete("age");
+console.log(
+  `
+   Deleted age
+   Name: ${user.has("name")}
+   Age: ${user.has("age")}
+   Email: ${user.has("email")}
+   Address: ${user.has("address")}
+   Phone: ${user.has("phone")}`,
 );
 
 // Set
