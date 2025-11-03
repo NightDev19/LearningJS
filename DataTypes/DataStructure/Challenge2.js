@@ -38,4 +38,3 @@ console.log(user);
 // 7. Iterate over the Map
 
 // 8. Clear all key-value pairs
-
