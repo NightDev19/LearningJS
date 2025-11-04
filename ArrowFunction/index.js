@@ -19,7 +19,6 @@ const person = {
 };
 person.greet(); // Output: Hello, my name is undefined and I am undefined years old.
 
-
 // no parameter arrow function
 
 const noParamArrowFunction = () => console.log("No parameter arrow function");
@@ -28,4 +27,20 @@ const noParamArrowFunction = () => console.log("No parameter arrow function");
 
 const noParamArrowFunctionWithReturn = () => {
   return "No parameter arrow function with return statement";
+};
+
+// Spread parameter
+
+const spreadParameterArrowFunction = (...args) => {
+  return args.reduce((acc, curr) => acc + curr, 0);
+};
+
+// with parameter
+
+const withArrowFunction = (a, b) => a + b;
+
+// with parameter and return statement
+
+const withArrowFunctionWithReturn = (a, b) => {
+  return a + b;
 };
