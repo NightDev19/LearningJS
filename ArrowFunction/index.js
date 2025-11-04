@@ -18,3 +18,14 @@ const person = {
     ),
 };
 person.greet(); // Output: Hello, my name is undefined and I am undefined years old.
+
+
+// no parameter arrow function
+
+const noParamArrowFunction = () => console.log("No parameter arrow function");
+
+// no parameter arrow function with return statement
+
+const noParamArrowFunctionWithReturn = () => {
+  return "No parameter arrow function with return statement";
+};
